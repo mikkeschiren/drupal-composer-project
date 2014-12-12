@@ -1,13 +1,14 @@
 {
   "name": "reload/drupal-composer-project",
   "description": "Composer template for Drupal projects",
-  "repositories": [ {
-    "type": "composer",
-    "url": "http://static.drupal-packagist.org/v0.2.0/"
-  },
+  "repositories": [
     {
       "type": "composer",
       "url": "https://raw.githubusercontent.com/derhasi/drupal-composer-project/master/packages.json"
+    },
+    {
+      "type": "composer",
+      "url": "http://drupal-packagist.webflo.io/"
     }
   ],
   "require": {
