@@ -4,24 +4,23 @@
   "repositories": [
     {
       "type": "composer",
-      "url": "https://raw.githubusercontent.com/derhasi/drupal-composer-project/master/packages.json"
+      "url": "http://drupal-packagist.webflo.io/"
     },
     {
-      "type": "composer",
-      "url": "http://drupal-packagist.webflo.io/"
+      "type": "vcs",
+      "url": "https://github.com/derhasi/installers.git"
     }
   ],
   "require": {
-    "azt3k/non-destructive-archive-installer": "0.2.*",
-    "drupal/drupal": "7.34.0",
-    "composer/installers": "~1.0",
+    "composer/installers": "dev-nested-packages",
+    "drupal/drupal": "7.32.0",
     "drupal/views": "7.*"
   },
   "scripts": {
     "post-create-project-cmd": ["rm README.md LICENSE"]
   },
   "config": {
-    "vendor-dir": "htdocs/sites/all/vendor"
+    "vendor-dir": "vendor"
   },
   "extra": {
     "installer-paths": {
