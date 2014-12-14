@@ -13,8 +13,8 @@
   ],
   "require": {
     "composer/installers": "dev-nested-packages",
-    "drupal/drupal": "7.32.0",
-    "drupal/views": "7.*"
+    "drupal/views": "7.*",
+    "drupal/drupal": "7.*"
   },
   "scripts": {
     "post-create-project-cmd": ["rm README.md LICENSE"]
@@ -28,7 +28,14 @@
       "htdocs/sites/all/themes/contrib/{$name}/": ["type:drupal-theme"],
       "htdocs/sites/all/libraries/{$name}/": ["type:drupal-library"],
       "htdocs/sites/all/drush/{$name}/": ["type:drupal-drush"],
-      "htdocs/profiles/{$name}/": ["type:drupal-profile"]
-    }
+      "htdocs/profiles/{$name}/": ["type:drupal-profile"],
+      "htdocs/" : ["type:drupal-core"]
+    },
+    "installer-preserve-subpaths": [
+      "htdocs/sites/all/modules/contrib",
+      "htdocs/sites/all/themes/contrib",
+      "htdocs/sites/all/libraries",
+      "htdocs/sites/all/drush"
+    ]
   }
 }
