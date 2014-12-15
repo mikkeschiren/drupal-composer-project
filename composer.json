@@ -1,5 +1,5 @@
 {
-  "name": "reload/drupal-composer-project",
+  "name": "derhasi/drupal-composer-project",
   "description": "Composer template for Drupal projects",
   "repositories": [
     {
@@ -8,11 +8,11 @@
     },
     {
       "type": "vcs",
-      "url": "https://github.com/derhasi/installers.git"
+      "url": "https://github.com/derhasi/custom-installer.git"
     }
   ],
   "require": {
-    "composer/installers": "dev-nested-packages",
+    "davidbarratt/custom-installer": "dev-preserve-subpaths",
     "drupal/views": "7.*",
     "drupal/drupal": "7.*"
   },
@@ -23,15 +23,15 @@
     "vendor-dir": "vendor"
   },
   "extra": {
-    "installer-paths": {
-      "htdocs/sites/all/modules/contrib/{$name}/": ["type:drupal-module"],
-      "htdocs/sites/all/themes/contrib/{$name}/": ["type:drupal-theme"],
-      "htdocs/sites/all/libraries/{$name}/": ["type:drupal-library"],
-      "htdocs/sites/all/drush/{$name}/": ["type:drupal-drush"],
-      "htdocs/profiles/{$name}/": ["type:drupal-profile"],
-      "htdocs/" : ["type:drupal-core"]
+    "custom-installer": {
+      "drupal-module": "htdocs/sites/all/modules/contrib/{$name}/",
+      "drupal-theme": "htdocs/sites/all/themes/contrib/{$name}/",
+      "drupal-library": "htdocs/sites/all/libraries/{$name}/",
+      "drupal-drush": "htdocs/sites/all/drush/{$name}/",
+      "drupal-profile": "htdocs/profiles/{$name}/",
+      "drupal-core": "htdocs/"
     },
-    "installer-preserve-subpaths": [
+    "custom-installer-preserve-subpaths": [
       "htdocs/sites/all/modules/contrib",
       "htdocs/sites/all/themes/contrib",
       "htdocs/sites/all/libraries",
