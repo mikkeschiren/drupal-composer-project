@@ -5,14 +5,11 @@
     {
       "type": "composer",
       "url": "http://drupal-packagist.webflo.io/"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/derhasi/custom-installer.git"
     }
   ],
   "require": {
-    "davidbarratt/custom-installer": "dev-preserve-subpaths",
+    "davidbarratt/custom-installer": "dev-master",
+    "derhasi/composer-preserve-paths": "0.1.*",
     "drupal/views": "7.*",
     "drupal/drupal": "7.*"
   },
@@ -31,7 +28,7 @@
       "drupal-profile": "htdocs/profiles/{$name}/",
       "drupal-core": "htdocs/"
     },
-    "custom-installer-preserve-subpaths": [
+    "preserve-paths": [
       "htdocs/sites/all/modules/contrib",
       "htdocs/sites/all/themes/contrib",
       "htdocs/sites/all/libraries",
