@@ -32,7 +32,9 @@
       "htdocs/sites/all/modules/contrib",
       "htdocs/sites/all/themes/contrib",
       "htdocs/sites/all/libraries",
-      "htdocs/sites/all/drush"
+      "htdocs/sites/all/drush",
+      "htdocs/sites/default/settings.php",
+      "htdocs/sites/default/files"
     ]
   }
 }
