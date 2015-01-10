@@ -5,13 +5,43 @@
     {
       "type": "composer",
       "url": "http://drupal-packagist.webflo.io/"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/derhasi/composer-patches-plugin.git"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "kasperg/composer-demo-patches",
+        "version": "1.0.0",
+        "type": "patches",
+        "require": {
+          "netresearch/composer-patches-plugin": "dev-root-patches"
+        },
+        "extra": {
+          "patches": {
+            "drupal/pathauto": {
+              "7.1.2": [
+                {
+                  "title": "Merge in pathauto_persist module functionality to prevent losing manual aliases with node_save() calls",
+                  "url": "https://www.drupal.org/files/issues/pathauto-persist-936222-213-pathauto-state.patch"
+                }
+              ]
+            }
+          }
+        }
+      }
     }
   ],
   "require": {
     "davidbarratt/custom-installer": "dev-master",
     "derhasi/composer-preserve-paths": "0.1.*",
+    "netresearch/composer-patches-plugin": "dev-root-patches",
     "drupal/views": "7.*",
-    "drupal/drupal": "7.*"
+    "drupal/drupal": "7.*",
+    "drupal/pathauto": "7.1.2",
+    "kasperg/composer-demo-patches": "1.0.0"
   },
   "scripts": {
     "post-create-project-cmd": ["rm README.md LICENSE"]
