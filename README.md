@@ -140,7 +140,7 @@ In this example the following releases of Drupal 7 modules will be downloaded:
 ```json 
     "require": {
 	    "drupal/ctools": "7.1.*",
-	    "drupal/features": "7.*"
+	    "drupal/features": "7.*",
 	    "drupal/views": "7.3-dev",
     }
 ```
@@ -180,8 +180,8 @@ The following will patch the Chaos tool suite version 7.1.4 with [this patch](ht
     }
   ],
   "require": {
-	"netresearch/composer-patches-plugin": "~1.0"
-    "reload/drupal-composer-project-patches": "*"
+    "netresearch/composer-patches-plugin": "~1.0",
+    "reload/drupal-composer-project-patches": "*",
   }
 ```
 
